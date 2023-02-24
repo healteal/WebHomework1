@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
   <artifactId>WebHomework1</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>WebHomework1 Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -20,7 +20,11 @@
       <version>1.18.26</version>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.32</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>WebHomework1</finalName>
