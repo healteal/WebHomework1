@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class General {
     public static void main(String[] args) {
-        //first_homework();
+        first_homework();
         second_homework("jdbc:mysql://localhost:3306/gym", "root", "123qwe");
     }
 
@@ -44,7 +44,9 @@ public class General {
             }
             statement.clearBatch();
             statement.executeUpdate("INSERT INTO instructor(fio, age, id_section, experience, education) " +
-                    "VALUES ('Шуппо Кирилл Геннадьевич', 25, 1, 5, 'КМС по Дзюдо');");
+                    "VALUES ('Шуппо Кирилл Геннадьевич', 25, 1, 5, 'КМС по Дзюдо')," +
+                    " ('Иванов Иван Иванович', 30, 2, 5, 'КМС по каратэ')," +
+                    " ('Степанов Степан Степанович', 40, 3, 15, 'Танго');"); // Дополнении к четвёртому домашнему заданию
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM instructor WHERE fio LIKE ?");
             preparedStatement.setString(1, "Шуппо%");
             resultSet = preparedStatement.executeQuery();
